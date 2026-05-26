@@ -914,7 +914,7 @@ function checkoutWhatsApp() {
     encodeURIComponent(message);
 
   const phone =
-    "919159842232";
+    "918903686085";
 
   window.open(
     `https://wa.me/${phone}?text=${encodedMessage}`,
@@ -1032,7 +1032,7 @@ function sendPaymentWhatsApp(paymentId, total) {
     encodeURIComponent(message);
 
   const phone =
-    "919159842232";
+    "918903686085";
 
   window.open(
     `https://wa.me/${phone}?text=${encodedMessage}`,
