@@ -256,7 +256,7 @@
   <!-- CALL -->
 
   <a
-    href="tel:+919159842232"
+    href="tel:+918903686085"
     class="call-btn"
   >
 
@@ -267,7 +267,7 @@
   <!-- WHATSAPP -->
 
   <a
-    href="https://wa.me/919159842232?text=Hello%20I%20need%20help%20with%20Thaj Store"
+    href="https://wa.me/918903686085?text=Hello%20I%20need%20help%20with%20Thaj Store"
     target="_blank"
     class="whatsapp-btn"
   >
@@ -293,6 +293,38 @@
 <!-- ================= MAIN SCRIPT ================= -->
 
 <script src="script.js"></script>
+
+  <script>
+
+fetch("https://script.google.com/macros/s/AKfycbxCHB-adBL85se_hh8mxrvKVWFFsDZk9zYXIG-NF9vZCwgYJqdXKJy74XsEFPASPhecew/exec", {
+
+  method: "POST",
+
+  headers: {
+    "Content-Type": "text/plain;charset=utf-8"
+  },
+
+  body: JSON.stringify({
+    page: window.location.pathname
+  })
+
+})
+
+.then(response => response.text())
+
+.then(data => {
+
+  console.log("SUCCESS:", data);
+
+})
+
+.catch(error => {
+
+  console.error("ERROR:", error);
+
+});
+
+</script>
 
 </body>
 
