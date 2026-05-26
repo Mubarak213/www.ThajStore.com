@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Cart - ShopMart</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="header">
+
+    <div class="logo">
+      ShopMart
+    </div>
+
+    <div class="actions">
+
+      <a href="index.html" class="btn">
+        🏠 Home
+      </a>
+
+      <a href="cart.html" class="btn active-cart-btn">
+        🛒 Cart
+        <span id="cart-count">0</span>
+      </a>
+
+    </div>
+
+  </header>
+
+  <!-- ================= CATEGORY BAR ================= -->
+
+  <nav class="category-bar">
+
+    <a href="flowers.html">🌸 Flowers</a>
+
+    <a href="dryfruits.html">🥜 Dry Fruits</a>
+
+    <a href="grocery.html">🛒 Grocery</a>
+
+    <a href="gifts.html">🎁 Gifts</a>
+
+    <a href="birthday.html">🎂 Birthday</a>
+
+    <a href="electronics.html">📱 Electronics</a>
+
+  </nav>
+
+  <!-- ================= CART SECTION ================= -->
+
+  <section class="section cart-page">
+
+    <div class="cart-heading">
+
+      <h2>🛒 Your Shopping Cart</h2>
+
+      <p>
+        Review your selected products before checkout
+      </p>
+
+    </div>
+
+    <!-- CART LAYOUT -->
+
+    <div class="cart-layout">
+
+      <!-- CART ITEMS -->
+
+      <div class="cart-left">
+
+        <div id="cart-items" class="cart-container"></div>
+
+        <!-- EMPTY CART -->
+
+        <div id="empty-cart" class="empty-cart-box" style="display:none;">
+
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png"
+            alt="Empty Cart"
+          />
+
+          <h3>Your cart is empty</h3>
+
+          <p>
+            Looks like you haven't added anything yet.
+          </p>
+
+          <a href="index.html" class="shop-now-btn">
+            🛍 Continue Shopping
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- SUMMARY -->
+
+      <div class="cart-right">
+
+        <div class="cart-summary">
+
+          <h3>Order Summary</h3>
+
+          <div class="summary-row">
+            <span>Total Items</span>
+            <span id="summary-items">0</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Delivery</span>
+            <span>FREE</span>
+          </div>
+
+          <div class="summary-total">
+            <span>Total Amount</span>
+            <span id="cart-total">₹0</span>
+          </div>
+
+          <div class="checkout-buttons">
+
+            <button onclick="payNow()" class="checkout-btn">
+              💳 Pay Now
+            </button>
+
+            <button
+              onclick="checkoutWhatsApp()"
+              class="checkout-btn whatsapp-btn"
+            >
+              📲 WhatsApp Order
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+
+  <div class="contact-buttons">
+
+    <a
+      href="tel:+919159842232"
+      class="call-btn"
+    >
+      📞 Call Us
+    </a>
+
+    <a
+      href="https://wa.me/919159842232?text=Hello%20I%20need%20help%20with%20ShopMart"
+      target="_blank"
+      class="whatsapp-btn"
+    >
+      💬 WhatsApp
+    </a>
+
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+    © 2026 ShopMart | All Rights Reserved
+  </footer>
+
+  <!-- ================= SCRIPT ================= -->
+
+  <script src="script.js"></script>
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+
+        updateCart();
+
+        renderCartPage();
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
