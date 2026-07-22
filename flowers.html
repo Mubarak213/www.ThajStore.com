@@ -191,58 +191,40 @@
 <!-- ================= PAGE LOAD ================= -->
 
 <script>
-
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
+document.addEventListener("DOMContentLoaded", () => {
 
     if (typeof updateCart === "function") {
-      updateCart();
+        updateCart();
     }
 
     if (typeof renderCartPage === "function") {
-      renderCartPage();
+        renderCartPage();
     }
 
     if (typeof fetchSheetData === "function") {
-      fetchSheetData();
+        fetchSheetData();
     }
 
-  }
-);
-
-
-<script>
-
-fetch("https://script.google.com/macros/s/AKfycbxCHB-adBL85se_hh8mxrvKVWFFsDZk9zYXIG-NF9vZCwgYJqdXKJy74XsEFPASPhecew/exec", {
-
-  method: "POST",
-
-  headers: {
-    "Content-Type": "text/plain;charset=utf-8"
-  },
-
-  body: JSON.stringify({
-    page: window.location.pathname
-  })
-
-})
-
-.then(response => response.text())
-
-.then(data => {
-
-  console.log("SUCCESS:", data);
-
-})
-
-.catch(error => {
-
-  console.error("ERROR:", error);
+    fetch("https://script.google.com/macros/s/AKfycbxCHB-adBL85se_hh8mxrvKVWFFsDZk9zYXIG-NF9vZCwgYJqdXKJy74XsEFPASPhecew/exec", {
+        method: "POST",
+        headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify({
+            page: window.location.pathname
+        })
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log("SUCCESS:", data);
+    })
+    .catch(error => {
+        console.error("ERROR:", error);
+    });
 
 });
-
 </script>
 
 </body>
+
 </html>
